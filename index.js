@@ -56,7 +56,7 @@ app.put("/articles/:id", (req, res) => {
       res.status(200).json({ message: "Data updated" });
     })
     .catch((err) => {
-      res.status(422).json("Can't create article");
+      res.status(422).json("Can't edit article");
     });
 });
 
@@ -72,7 +72,7 @@ app.delete("/articles/:id", (req, res) => {
       res.sendStatus(204);
     })
     .catch((err) => {
-      res.status(422).json("Can't create article");
+      res.status(422).json("Can't delete article");
     });
 });
 
